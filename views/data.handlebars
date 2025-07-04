@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Submitted Data</title>
+</head>
+<body>
+  <h1>Submitted Data</h1>
+  {{#if entries.length}}
+  <table border="1" cellpadding="5">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each entries}}
+      <tr>
+        <td>{{this.name}}</td>
+        <td>{{this.email}}</td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+  {{else}}
+    <p>No data submitted yet.</p>
+  {{/if}}
+  <br>
+  <a href="/">Back to form</a>
+</body>
+</html> 
